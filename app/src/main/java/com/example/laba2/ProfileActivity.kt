@@ -2,6 +2,8 @@ package com.example.laba2
 
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
 class ProfileActivity : AppCompatActivity() {
@@ -24,5 +26,20 @@ class ProfileActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.textProfileLogin).text =
             getString(R.string.profile_login, login)
+
+        onBackPressedDispatcher.addCallback(
+            this,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    Toast.makeText(
+                        this@ProfileActivity,
+                        "Вы вышли с окна Профиль",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    finish()
+                }
+            }
+        )
     }
 }

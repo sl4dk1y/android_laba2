@@ -3,6 +3,8 @@ package com.example.laba2
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
 class RegisterActivity : AppCompatActivity() {
@@ -39,6 +41,21 @@ class RegisterActivity : AppCompatActivity() {
 
             finish()
         }
+
+        onBackPressedDispatcher.addCallback(
+            this,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "Вы вышли с окна Регистрация",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    finish()
+                }
+            }
+        )
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

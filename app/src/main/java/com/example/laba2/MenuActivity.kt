@@ -3,6 +3,8 @@ package com.example.laba2
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -45,5 +47,20 @@ class MenuActivity : AppCompatActivity() {
         findViewById<Button>(R.id.buttonExit).setOnClickListener {
             finishAffinity()
         }
+
+        onBackPressedDispatcher.addCallback(
+            this,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    Toast.makeText(
+                        this@MenuActivity,
+                        "Вы вышли с окна Меню",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    finish()
+                }
+            }
+        )
     }
 }
