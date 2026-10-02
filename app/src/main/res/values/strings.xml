@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">laba2</string>
+
+    <!-- Главное окно -->
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="sign_in">Вход</string>
+    <string name="registration">Регистрация</string>
+    <string name="exit">Выход</string>
+
+    <!-- Меню -->
+    <string name="start">Старт</string>
+    <string name="profile">Профиль</string>
+    <string name="settings">Настройки</string>
+    <string name="report_problem">Сообщить о проблеме</string>
+
+    <!-- Регистрация -->
+    <string name="registration_title">Регистрация</string>
+    <string name="name">Имя</string>
+    <string name="email">E-mail</string>
+    <string name="register">Зарегистрироваться</string>
+
+    <!-- Профиль -->
+    <string name="profile_title">Профиль</string>
+    <string name="profile_name">Имя: %1$s</string>
+    <string name="profile_email">E-mail: %1$s</string>
+    <string name="profile_login">Логин: %1$s</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="app_theme">Тема приложения</string>
+    <string name="day">День</string>
+    <string name="night">Ночь</string>
+
+    <!-- Отправка сообщения -->
+    <string name="problem_subject">Сообщение о проблеме</string>
+    <string name="problem_text">Описание проблемы: </string>
+    <string name="share_problem">Сообщить о проблеме</string>
+</resources>
